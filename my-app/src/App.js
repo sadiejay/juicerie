@@ -1,21 +1,65 @@
-import Health from './Health';
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+
+// import components
+import Main from './components/Main';
+import About from './components/About';
+import Juices from './components/JuicesContainer';
+import LogIn from './components/LogInContainer';
+
+// import styles
 import './App.css';
+import logo from './logo.svg';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Health imageSource= './src/images/gut.jpg' healthArea='Gut Health'></Health>
-        {/* <Health imageSource='./images/heart.jpg' healthArea='Heart Health'></Health>
-        <Health healthArea='Skin Health'></Health>
-        <Health healthArea='Colon Health'></Health>
-        <Health healthArea='Brain Health'></Health> */}
-     
+    <Router>
+      <div>
+        <nav>
+          <div className='logo-area'>
+            <img src={logo} alt='logo' />
+          </div>
+          <ul>
+            <li>
+              <Link to='/'>Home</Link>
+            </li>
+            <li>
+              <Link to='/juices'>Juices</Link>
+            </li>
+            <li>
+              <Link to='/about'>About</Link>
+            </li>
+            <li>
+              <Link to='/login'>Log In</Link>
+            </li>
+          </ul>
+        </nav>
 
-      </header>
-    </div>
-  
+        {/* A <Routes> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+        <Routes>
+          <Route path='/about' element={<About />} />
+          <Route path='/login' element={<LogIn />} />
+          <Route path='/juices' element={<Juices />} />
+          <Route path='/' element={<Main />} />
+        </Routes>
+
+        <footer>
+          <div>&copy; 2022</div>
+          <ul>
+            <li>
+              <Link to='/login'>Log In</Link>
+            </li>
+            <li>
+              <Link to='/about'>About</Link>
+            </li>
+            <li>
+              <Link to='/juices'>Juices</Link>
+            </li>
+          </ul>
+        </footer>
+      </div>
+    </Router>
   );
 }
 
