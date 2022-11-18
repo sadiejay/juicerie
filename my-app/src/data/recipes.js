@@ -1,7 +1,10 @@
-import Juice from './Juice.js';
+// import juice class
+import Juice from './JuiceClass.js';
+
+// import images
 
 const glow = new Juice('Glow with your Gut');
-glow.addNewHealthAreas('Gut Health');
+glow.addNewHealthAreas('Gut');
 glow.editRecipeItems({
   celery: '1 head',
   cucumber: '1',
@@ -12,9 +15,10 @@ glow.editRecipeItems({
 glow.editHealthBenefits(
   'Glow With Your Gut and enjoy this vibrant, nutrient-packed juice. Celery offers nutrients and compounds which may help protect the entire digestive tract, decrease instances of stomach ulcers, and improve the lining of the stomach. Leafy greens, such as kale, are excellent sources of fiber, as well as nutrients like folate, vitamin C, vitamin K and vitamin A. Leafy greens also contain a specific type of sugar that helps fuel growth of healthy gut bacteria. The oranges in this juice sweeten up the deal as a fruit with less fructose, making them easier to tolerate and less likely to cause gas. Ginger is a star in this show. Gingerol, a natural component of ginger root, benefits gastrointestinal motility ― the rate at which food exits the stomach and continues along the digestive process.'
 );
+glow.addImage();
 
 const heartbeets = new Juice('The 5 Heartbeets');
-heartbeets.addNewHealthAreas('Heart Health');
+heartbeets.addNewHealthAreas('Heart');
 heartbeets.editRecipeItems({
   celery: '1 head',
   cucumber: '1',

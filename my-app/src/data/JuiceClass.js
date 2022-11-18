@@ -41,6 +41,7 @@ function Juice(juiceName) {
   this.healthAreas = {};
   this.juiceRecipe = {};
   this.healthBenefits = '';
+  this.imageSource = null;
 }
 
 Juice.prototype.changeName = function (newName) {
@@ -81,6 +82,10 @@ Juice.prototype.editRecipeItems = function (recipeItems) {
 Juice.prototype.editHealthBenefits = function (healthBenefitsDescription) {
   this.healthBenefits = healthBenefitsDescription;
   return this.healthBenefits;
+};
+
+Juice.prototype.addImage = function (image) {
+  this.imageSource = image;
 };
 
 module.exports = Juice;

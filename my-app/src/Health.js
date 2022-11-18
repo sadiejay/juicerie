@@ -1,6 +1,6 @@
 function Health(props) {
   return (
-    <div className='App'>
+    <div className='health-area-card'>
       <img
         src={props.imageSource}
         className='App-logo'
