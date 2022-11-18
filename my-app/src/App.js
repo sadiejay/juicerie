@@ -2,15 +2,14 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 // import components
-import Main from './Main';
-import About from './About';
-import Juices from './JuicesContainer';
-import LogIn from './LogInContainer';
+import Main from './components/Main';
+import About from './components/About';
+import Juices from './components/JuicesContainer';
+import LogIn from './components/LogInContainer';
 
 // import styles
 import './App.css';
 import logo from './logo.svg';
-import JuicesContainer from './JuicesContainer';
 
 function App() {
   return (
@@ -44,6 +43,21 @@ function App() {
           <Route path='/juices' element={<Juices />} />
           <Route path='/' element={<Main />} />
         </Routes>
+
+        <footer>
+          <div>&copy; 2022</div>
+          <ul>
+            <li>
+              <Link to='/login'>Log In</Link>
+            </li>
+            <li>
+              <Link to='/about'>About</Link>
+            </li>
+            <li>
+              <Link to='/juices'>Juices</Link>
+            </li>
+          </ul>
+        </footer>
       </div>
     </Router>
   );
