@@ -6,6 +6,8 @@ import Main from './components/Main';
 import About from './components/About';
 import Juices from './components/JuicesContainer';
 import LogIn from './components/LogInContainer';
+import Health from './components/Health';
+import HealthArea from './components/HealthArea';
 
 // import styles
 import './App.scss';
@@ -41,6 +43,9 @@ function App() {
           <Route path='/about' element={<About />} />
           <Route path='/login' element={<LogIn />} />
           <Route path='/juices' element={<Juices />} />
+          <Route path='/health' element={<HealthArea />}>
+            <Route path=':healthArea' element={<HealthArea />} />
+          </Route>
           <Route path='/' element={<Main />} />
         </Routes>
 

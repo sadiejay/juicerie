@@ -1,3 +1,6 @@
+/* 
+This component is rendered by the Main component. It should include information about Juicerie! The best juice app for your health ;)
+*/
 function Info() {
   return (
     <div>
