@@ -12,7 +12,7 @@ import RecipeComponent from './components/RecipeComponent';
 
 // import styles
 import './App.scss';
-import logo from './logo.svg';
+import logo from './images/logo.png';
 
 function App() {
   return (

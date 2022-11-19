@@ -2,8 +2,7 @@
 import Juice from './JuiceClass.js';
 
 // import images
-import logo from '../images/logo.png'
-
+import logo from '../images/logo.png';
 
 const glow = new Juice('Glow with your Gut');
 glow.addNewHealthAreas('Gut');
@@ -29,7 +28,8 @@ heartbeets.editRecipeItems({
   grapes: '1 cup',
   tumeric: '1 small piece',
   apples: 'small gree, cored and sliced',
-  pepper: 'black, sprinkled in after juice for better absorption and activiation of the tumeric',
+  pepper:
+    'black, sprinkled in after juice for better absorption and activiation of the tumeric',
 });
 
 heartbeets.editHealthBenefits(
@@ -47,11 +47,13 @@ brain.editRecipeItems({
   apples: '2 green',
   limes: '2 with seeds removed',
 });
-brain.editHealthBenefits('This gorgeous green juice contains spinach which is a leafy green that is rich in brain-healthy nutrients like vitamin K, lutein, folate, and beta carotene which may slow cognitive decline. The Mean Green Brain Machine also features lime which is rich in Vitamin C and helps prevent brain cells from becoming damaged and supports overall brain health. Bolster your brain health with this tasty juice!');
+brain.editHealthBenefits(
+  'This gorgeous green juice contains spinach which is a leafy green that is rich in brain-healthy nutrients like vitamin K, lutein, folate, and beta carotene which may slow cognitive decline. The Mean Green Brain Machine also features lime which is rich in Vitamin C and helps prevent brain cells from becoming damaged and supports overall brain health. Bolster your brain health with this tasty juice!'
+);
 brain.addImage(logo);
 
 const colon = new Juice('Smooth Move');
-colon.addNewHealthAreas('Colon');
+colon.addNewHealthAreas('Colon', 'Gut');
 colon.editRecipeItems({
   apple: '1',
   lemon: '1',
@@ -61,7 +63,9 @@ colon.editRecipeItems({
   celery: '1 head',
 });
 
-colon.editHealthBenefits("Colon health is vital to your body’s overall wellbeing. The colon is a major organ essential for waste removal in the body. If the colon is not working properly, the body can't absorb essential nutrients or rid itself of waste. This juice supports your colon to be the best it can be with benefits such as phytochemicals and antioxidants which are believed to prevent or slow cell damage caused by free radicals – the unstable waste molecules your body produces that can cause diseases. Treating yourself with this juice is a smooth move!");
+colon.editHealthBenefits(
+  "Colon health is vital to your body’s overall wellbeing. The colon is a major organ essential for waste removal in the body. If the colon is not working properly, the body can't absorb essential nutrients or rid itself of waste. This juice supports your colon to be the best it can be with benefits such as phytochemicals and antioxidants which are believed to prevent or slow cell damage caused by free radicals – the unstable waste molecules your body produces that can cause diseases. Treating yourself with this juice is a smooth move!"
+);
 colon.addImage(logo);
 
 const skin = new Juice('Skin Secret');
@@ -72,13 +76,11 @@ skin.editRecipeItems({
   apples: '2 small green, cored and sliced',
   lemon: '2 , peeled with seeds removed',
 });
-skin.editHealthBenefits("Enjoy clear skin from within with the Skin Secret juice. This refreshing juice features cucumber which is known for its hydrating and anti-inflammatory qualities. Mint is known for its anti-bacterial and anti-inflammatory properties which could help ward off acne. Lemons are rich in Vitamin C and may help prevent free radicals that can damage collagen, leaving you with smoother skin. Apples boast a rich vitamin content including vitamins A, C, as well as zinc, which are compounds thought to promote clear, healthy skin. Drink this juice when you want folks to wonder… “What's their Skin Secret?!”");
+skin.editHealthBenefits(
+  "Enjoy clear skin from within with the Skin Secret juice. This refreshing juice features cucumber which is known for its hydrating and anti-inflammatory qualities. Mint is known for its anti-bacterial and anti-inflammatory properties which could help ward off acne. Lemons are rich in Vitamin C and may help prevent free radicals that can damage collagen, leaving you with smoother skin. Apples boast a rich vitamin content including vitamins A, C, as well as zinc, which are compounds thought to promote clear, healthy skin. Drink this juice when you want folks to wonder… “What's their Skin Secret?!”"
+);
 skin.addImage(logo);
 
 const recipes = [glow, heartbeets, brain, colon, skin];
-
-
-
-
 
 export default recipes;
