@@ -21,6 +21,7 @@ function App() {
         <nav>
           <div className='logo-area'>
             <img src={logo} alt='logo' />
+            <p>Match your vision of health with a delicious juice recipe to support your needs. </p>
           </div>
           <ul>
             <li>
