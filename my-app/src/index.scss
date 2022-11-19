@@ -64,6 +64,41 @@ h6 {
   isolation: isolate;
 }
 
+
+// mixins
+@mixin flexContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin cardFlexWrap {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+}
+
+@mixin listFlex {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+// variables
+$colors: (
+  'dark': black,
+  'mid': grey,
+  'light': ivory,
+);
+
+
+$fonts: (
+  'sans': "Noto Sans",
+  'serif': "Agrandir",
+);
+
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
