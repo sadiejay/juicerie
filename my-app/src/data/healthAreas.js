@@ -24,7 +24,7 @@ const healthAreas = [
 ];
 
 healthAreas.forEach((area) => {
-  area.juices = area.addJuices(juices);
+  area.addJuices(juices);
 });
 
 export default healthAreas;
