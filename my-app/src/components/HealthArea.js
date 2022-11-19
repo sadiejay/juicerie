@@ -30,7 +30,7 @@ function HealthArea() {
 
 
 
-  console.log(juiceRecipes);
+
   return (
     <section>
       <p>you clicked the {healthArea} Health area</p>
