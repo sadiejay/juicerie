@@ -8,7 +8,7 @@ import Juices from './components/JuicesContainer';
 import LogIn from './components/LogInContainer';
 
 // import styles
-import './App.css';
+import './App.scss';
 import logo from './logo.svg';
 
 function App() {

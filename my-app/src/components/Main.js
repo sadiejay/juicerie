@@ -8,7 +8,7 @@ import Info from './Info';
 import areas from '../data/healthAreas.js';
 
 // import styles
-import '../App.css';
+import '../App.scss';
 
 function Main() {
   // initialize State with healthAreas, and info content
