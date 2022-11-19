@@ -8,6 +8,7 @@ import Juices from './components/JuicesContainer';
 import LogIn from './components/LogInContainer';
 import Health from './components/Health';
 import HealthArea from './components/HealthArea';
+import RecipeComponent from './components/RecipeComponent';
 
 // import styles
 import './App.scss';
@@ -42,7 +43,9 @@ function App() {
         <Routes>
           <Route path='/about' element={<About />} />
           <Route path='/login' element={<LogIn />} />
-          <Route path='/juices' element={<Juices />} />
+          <Route path='/juices' element={<RecipeComponent />}>
+            <Route path=':juiceName' element={<RecipeComponent />} />
+          </Route>
           <Route path='/health' element={<HealthArea />}>
             <Route path=':healthArea' element={<HealthArea />} />
           </Route>
